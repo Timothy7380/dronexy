@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "Dronexy",
+    "slug": "dronexy",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#0D0D0D",
+    "splash": {
+      "backgroundColor": "#0D0D0D",
+      "resizeMode": "contain"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.dronexy.app"
+    },
+    "android": {
+      "package": "com.dronexy.app",
+      "backgroundColor": "#0D0D0D"
+    }
+  }
+}
