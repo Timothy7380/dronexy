@@ -48,6 +48,11 @@ import PilotProfileScreen from './src/screens/PilotProfileScreen';
 import PrivacySecurityScreen from './src/screens/PrivacySecurityScreen';
 import LegalScreen from './src/screens/LegalScreen';
 import HelpSupportScreen from './src/screens/HelpSupportScreen';
+import ServiceRequestScreen from './src/screens/ServiceRequestScreen';
+import ReviewRequestScreen from './src/screens/ReviewRequestScreen';
+import SecureCheckoutScreen from './src/screens/SecureCheckoutScreen';
+import ProcessingPaymentScreen from './src/screens/ProcessingPaymentScreen';
+import PaymentSuccessfulScreen from './src/screens/PaymentSuccessfulScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -117,6 +122,11 @@ export default function App() {
           <Stack.Screen name="PrivacySecurity" component={PrivacySecurityScreen} />
           <Stack.Screen name="Legal" component={LegalScreen} />
           <Stack.Screen name="HelpSupport" component={HelpSupportScreen} />
+          <Stack.Screen name="ServiceRequest" component={ServiceRequestScreen} />
+          <Stack.Screen name="ReviewRequest" component={ReviewRequestScreen} />
+          <Stack.Screen name="SecureCheckout" component={SecureCheckoutScreen} />
+          <Stack.Screen name="ProcessingPayment" component={ProcessingPaymentScreen} />
+          <Stack.Screen name="PaymentSuccessful" component={PaymentSuccessfulScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

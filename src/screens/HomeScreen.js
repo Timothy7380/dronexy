@@ -8,9 +8,9 @@ import { colors, fonts, radius } from '../theme';
 import { SERVICES, ACTIVE_MISSIONS } from '../data/services';
 import BottomNav from '../components/BottomNav';
 
-function ServiceIcon({ item }) {
+function ServiceIcon({ item, onPress }) {
   return (
-    <TouchableOpacity activeOpacity={0.8} style={styles.service}>
+    <TouchableOpacity activeOpacity={0.8} style={styles.service} onPress={onPress}>
       {item.image ? (
         <Image source={item.image} style={styles.serviceImage} />
       ) : (
@@ -81,7 +81,11 @@ export default function HomeScreen({ navigation }) {
           {/* Services grid */}
           <View style={styles.grid}>
             {SERVICES.map((item) => (
-              <ServiceIcon key={item.key} item={item} />
+              <ServiceIcon
+                key={item.key}
+                item={item}
+                onPress={() => navigation.navigate('ServiceRequest', { category: item.label.replace(/\n/g, ' ') })}
+              />
             ))}
           </View>
 
