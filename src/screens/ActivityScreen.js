@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  View, Text, StyleSheet, ScrollView, TouchableOpacity,
+  View, Text, StyleSheet, ScrollView, TouchableOpacity, Image,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
@@ -32,9 +32,11 @@ export default function ActivityScreen({ navigation }) {
         <View style={styles.inner}>
           {/* Mission header card */}
           <View style={styles.missionCard}>
-            <View style={styles.thumb}>
-              <Ionicons name="image-outline" size={18} color="#4A4A4A" />
-            </View>
+            <Image
+              source={require('../../assets/missions/lekki.png')}
+              style={styles.thumb}
+              resizeMode="cover"
+            />
             <View>
               <Text style={styles.missionTitle}>Lekki Estate Survey</Text>
               <Text style={styles.missionId}>Mission ID: DX-7721</Text>

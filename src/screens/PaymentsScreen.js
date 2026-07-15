@@ -8,9 +8,9 @@ import { colors, fonts, radius } from '../theme';
 import BottomNav from '../components/BottomNav';
 
 const TRANSACTIONS = [
-  { key: '1', title: 'Lekki Estate Survey', date: 'Oct 20, 2026', status: 'COMPLETED' },
-  { key: '2', title: 'Security Patrol', date: 'Oct 18, 2026', status: 'IN ESCROW' },
-  { key: '3', title: 'Initial Deposit', date: 'Oct 15, 2026', status: 'PENDING' },
+  { key: '1', title: 'Lekki Estate Survey', date: 'Oct 20, 2026', status: 'COMPLETED', pill: true },
+  { key: '2', title: 'Security Patrol', date: 'Oct 18, 2026', status: 'IN ESCROW', pill: false },
+  { key: '3', title: 'Initial Deposit', date: 'Oct 15, 2026', status: 'PENDING', pill: true },
 ];
 
 const INVOICES = [
@@ -52,7 +52,11 @@ export default function PaymentsScreen({ navigation }) {
                 <Text style={styles.txTitle}>{t.title}</Text>
                 <Text style={styles.txDate}>{t.date}</Text>
               </View>
-              <Text style={styles.txStatus}>{t.status}</Text>
+              {t.pill ? (
+                <Text style={styles.txStatus}>{t.status}</Text>
+              ) : (
+                <Text style={styles.txStatusText}>{t.status}</Text>
+              )}
             </View>
           ))}
 
@@ -177,6 +181,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 4,
     overflow: 'hidden',
+    letterSpacing: 0.4,
+  },
+  txStatusText: {
+    fontFamily: fonts.black,
+    fontSize: 10,
+    color: colors.text,
     letterSpacing: 0.4,
   },
   totalRow: {

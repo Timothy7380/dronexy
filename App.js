@@ -45,6 +45,9 @@ import UploadCredentialsScreen from './src/screens/UploadCredentialsScreen';
 import PilotMessagesScreen from './src/screens/PilotMessagesScreen';
 import PilotNotificationsScreen from './src/screens/PilotNotificationsScreen';
 import PilotProfileScreen from './src/screens/PilotProfileScreen';
+import PrivacySecurityScreen from './src/screens/PrivacySecurityScreen';
+import LegalScreen from './src/screens/LegalScreen';
+import HelpSupportScreen from './src/screens/HelpSupportScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -111,6 +114,9 @@ export default function App() {
           <Stack.Screen name="PilotMessages" component={PilotMessagesScreen} />
           <Stack.Screen name="PilotNotifications" component={PilotNotificationsScreen} />
           <Stack.Screen name="PilotProfile" component={PilotProfileScreen} />
+          <Stack.Screen name="PrivacySecurity" component={PrivacySecurityScreen} />
+          <Stack.Screen name="Legal" component={LegalScreen} />
+          <Stack.Screen name="HelpSupport" component={HelpSupportScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

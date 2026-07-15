@@ -11,9 +11,9 @@ const MENU = [
   { key: 'account', icon: 'person-outline', title: 'Account Settings', sub: 'Personal info, verification, password', route: 'AccountSettings' },
   { key: 'payments', icon: 'card-outline', title: 'Payment Methods', sub: 'Visa •••• 8472, Invoices', route: 'PaymentMethods' },
   { key: 'notifs', icon: 'notifications-outline', title: 'Notification Preferences', sub: 'Push, Email, SMS alerts', route: 'Notifications' },
-  { key: 'privacy', icon: 'shield-outline', title: 'Privacy & Security', sub: null },
-  { key: 'help', icon: 'help-circle-outline', title: 'Help & Support', sub: 'Help center, chat with us' },
-  { key: 'legal', icon: 'document-text-outline', title: 'Legal', sub: 'Terms of service, privacy policy' },
+  { key: 'privacy', icon: 'shield-outline', title: 'Privacy & Security', sub: '2FA, biometrics, permissions', route: 'PrivacySecurity' },
+  { key: 'help', icon: 'help-circle-outline', title: 'Help & Support', sub: 'Help center, chat with us', route: 'HelpSupport' },
+  { key: 'legal', icon: 'document-text-outline', title: 'Legal', sub: 'Terms of service, privacy policy', route: 'Legal' },
 ];
 
 const STATS = [
